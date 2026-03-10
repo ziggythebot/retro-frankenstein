@@ -1,0 +1,24 @@
+{
+  "name": "retro-frankenstein",
+  "version": "1.0.0",
+  "description": "**Mega tool for creating retro versions of modern websites**",
+  "main": "image-scraper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziggythebot/retro-frankenstein.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ziggythebot/retro-frankenstein/issues"
+  },
+  "homepage": "https://github.com/ziggythebot/retro-frankenstein#readme",
+  "dependencies": {
+    "puppeteer": "^24.39.0"
+  }
+}
