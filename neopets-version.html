@@ -12,64 +12,23 @@
         }
         
         .container {
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: 20px auto;
             background: #FFF;
             border: 10px solid #6B4423;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
         
         .header {
             background: linear-gradient(to bottom, #FFE4B5, #FFD700);
             border-bottom: 5px solid #8B4513;
-            padding: 40px;
+            padding: 30px;
             text-align: center;
-            position: relative;
-        }
-        
-        .bb-logo {
-            width: 120px;
-            height: auto;
-            margin: 0 auto 20px;
-        }
-        
-        .eye-logo {
-            width: 80px;
-            height: 80px;
-            margin: 10px;
         }
         
         h1 {
             color: #4B0082;
-            font-size: 48px;
+            font-size: 42px;
             margin: 10px 0;
-            text-shadow: 2px 2px #FFD700;
-            font-weight: bold;
-        }
-        
-        .tagline {
-            color: #8B4513;
-            font-size: 18px;
-            margin: 10px 0 0 0;
-            font-style: italic;
-        }
-        
-        .nav {
-            background: #6B4423;
-            padding: 15px;
-            text-align: center;
-        }
-        
-        .nav a {
-            color: #FFD700;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        
-        .nav a:hover {
-            color: #FFF;
         }
         
         .content {
@@ -79,233 +38,97 @@
         .section {
             background: #FFFACD;
             border: 3px solid #FFD700;
-            border-radius: 15px;
+            border-radius: 10px;
             padding: 20px;
             margin: 20px 0;
-            position: relative;
-        }
-        
-        .section h2 {
-            color: #4B0082;
-            border-bottom: 3px solid #FFD700;
-            padding-bottom: 10px;
-        }
-        
-        .negg-icon {
-            width: 40px;
-            height: 40px;
-            background: url('https://images.neopets.com/items/foo_negg.gif') no-repeat center;
-            background-size: contain;
-            display: inline-block;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-        
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        
-        .portfolio-item {
-            background: #FFF;
-            border: 3px solid #8B4513;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-        }
-        
-        .portfolio-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-        
-        .neopets-button {
-            background: linear-gradient(to bottom, #FFD700, #FFA500);
-            border: 3px solid #8B4513;
-            border-radius: 10px;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #4B0082;
-            text-decoration: none;
-            display: inline-block;
-            margin: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            cursor: pointer;
-        }
-        
-        .neopets-button:hover {
-            background: linear-gradient(to bottom, #FFA500, #FFD700);
-            transform: translateY(-2px);
         }
         
         .footer {
             background: #6B4423;
             color: #FFD700;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
             border-top: 5px solid #8B4513;
         }
         
-        .footer a {
-            color: #FFD700;
-            text-decoration: none;
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
         
-        .shop-banner {
-            background: linear-gradient(45deg, #FFD700, #FFA500, #FF6347);
+        td {
             padding: 15px;
             text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: #FFF;
-            text-shadow: 2px 2px #000;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        
-        .floating-pet {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 120px;
-            height: 120px;
-            background: url('https://pets.neopets.com/cp/shoyru/body/6.png') no-repeat center;
-            background-size: contain;
-            animation: float 3s ease-in-out infinite;
-            z-index: 1000;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+            border: 2px solid #8B4513;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://freight.cargo.site/t/original/i/0c2a3b0a47f87ecc0ee8fdba47c28aef718f4e3c3fd736fd93fdc9e12bb7c55e/BonanzaBranding_webicon-1.png" alt="Bureau Bonanza" class="bb-logo">
-            <h1>⚡ Bureau Bonanza ⚡</h1>
-            <img src="https://freight.cargo.site/t/original/i/9d1d4070dd5c79ffd7015b8f93bcf4061ae779003c3e62d8c53b3e37c2f9e382/eyeballs.svg" alt="Eyes" class="eye-logo">
-            <p class="tagline">~ Extraordinary Design for Creative Neopians ~</p>
-        </div>
-        
-        <div class="nav">
-            <a href="#">🏠 Home</a>
-            <a href="#">📖 About</a>
-            <a href="https://bureaubonanza.com">🎨 Portfolio</a>
-            <a href="mailto:hello@bureaubonanza.com">📬 Contact</a>
-            <a href="https://instagram.com/bureau.bonanza">⭐ Quest</a>
+            <img src="https://freight.cargo.site/i/0c2a3b0a47f87ecc0ee8fdba47c28aef718f4e3c3fd736fd93fdc9e12bb7c55e/BonanzaBranding_webicon-1.png" alt="Bureau Bonanza" width="100">
+            <h1>Bureau Bonanza</h1>
+            <img src="https://freight.cargo.site/t/original/i/9d1d4070dd5c79ffd7015b8f93bcf4061ae779003c3e622b5d5a3b0bdf75af07/eyeballs.svg" alt="Eyes" width="60">
+            <p style="font-size: 16px; color: #8B4513;">
+                Extraordinary Design for Creative Neopians
+            </p>
         </div>
         
         <div class="content">
-            <div class="shop-banner">
-                ✨ GRAND OPENING SPECIAL! DESIGN SERVICES NOW AVAILABLE! ✨
-            </div>
-            
             <div class="section">
-                <h2><span class="negg-icon"></span>Welcome to Our Studio!</h2>
-                <p style="font-size: 16px; line-height: 1.6;">
-                    Greetings, fellow Neopian! We create <b>extraordinary, engaging, and robust design</b> 
-                    for entrepreneurs, artists, and organisations across all of Neopia!
-                </p>
-                <p style="font-size: 16px; line-height: 1.6;">
-                    From Mystery Island to Faerieland, we've helped countless clients achieve their creative dreams!
+                <h2 style="color: #4B0082;">Welcome to Our Studio!</h2>
+                <p>
+                    We create extraordinary, engaging, and robust design 
+                    for entrepreneurs, artists, and organisations across Neopia!
                 </p>
             </div>
             
             <div class="section">
-                <h2><span class="negg-icon"></span>Our Legendary Portfolio</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <img src="https://freight.cargo.site/t/original/i/9121289f505ccdd26d6a849d2f6e5547ac7639a4fe0b09e804e48784ce9ef24c/Logo.gif" alt="Logo Magic">
-                        <h3>Logo Magic</h3>
-                        <p>Animated guild logos!</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://freight.cargo.site/w/300/i/9798371b6e926d96df8c3e054b2a3a5878a285d0b77f7b4acee5a04adf92d3d5/DHG.gif" alt="Design Quest">
-                        <h3>Design Quests</h3>
-                        <p>Epic branding projects!</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://freight.cargo.site/w/250/i/472c0c562626b90c490133b4eac9ae421d0991a796280f3c2ad92eb374b7ceef/poppy.gif" alt="Illustration">
-                        <h3>Custom Art</h3>
-                        <p>Pet portraits & more!</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://freight.cargo.site/w/300/i/c702ce2e11efd9f4c4d6a49083409ca3ebde34ce0b12ff5e33a42cddb31c82c1/BAEanimation0001-0089_AdobeExpress-1.gif" alt="Animation">
-                        <h3>Motion Magic</h3>
-                        <p>Battledome animations!</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://freight.cargo.site/w/1000/i/1bd139e5e4fdccb1c89e57a3c5e5ca93b0de3296119e61c0f7c4d2e0ec5f42ad/Bags_0003_Layer-1.png" alt="Packaging">
-                        <h3>Shop Designs</h3>
-                        <p>Product packaging!</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://freight.cargo.site/w/1000/i/21bc09c27e7ee133302383e046822f0dfd62e79fa658ed5dbe7c8e6f8a36e1a1/DTF22_Front_Open.png" alt="Editorial">
-                        <h3>Neopian Times</h3>
-                        <p>Editorial layouts!</p>
-                    </div>
-                </div>
+                <h2 style="color: #4B0082;">Our Portfolio</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="https://freight.cargo.site/i/e094fa34a211ce1a4e07a530f1bc3381ad0609fc123778867d63f4ee356acfdd/BNZ_profile.gif" width="150"><br>
+                            <b>Animated Logos</b>
+                        </td>
+                        <td>
+                            <img src="https://freight.cargo.site/w/200/h/200/c/0/0/200/200/i/c63bd10a982c858c28057abfe3c9222e1e8910e642e41366d3946c77d9e5497c/Palms300x.png" width="150"><br>
+                            <b>Branding</b>
+                        </td>
+                    </tr>
+                </table>
+                <p style="text-align: center;">
+                    <a href="https://bureaubonanza.com">Visit our full portfolio →</a>
+                </p>
             </div>
             
             <div class="section">
-                <h2><span class="negg-icon"></span>Our Services</h2>
-                <ul style="font-size: 16px; line-height: 1.8;">
-                    <li>🎨 <b>Brand Identity</b> - Transform your guild or shop!</li>
-                    <li>📰 <b>Editorial Design</b> - Neopian Times features!</li>
-                    <li>🌐 <b>Web Design</b> - Custom guild & shop layouts!</li>
-                    <li>🎬 <b>Motion Graphics</b> - Animated signatures!</li>
-                    <li>✏️ <b>Illustration</b> - Custom pet art!</li>
-                    <li>📦 <b>Packaging</b> - Product design!</li>
+                <h2 style="color: #4B0082;">Our Services</h2>
+                <ul>
+                    <li>Brand Identity</li>
+                    <li>Editorial Design</li>
+                    <li>Web Design</li>
+                    <li>Motion Graphics</li>
+                    <li>Illustration</li>
+                    <li>Packaging</li>
                 </ul>
             </div>
             
             <center>
-                <h2 style="color: #4B0082;">Ready to Start Your Quest?</h2>
-                <a href="https://bureaubonanza.com" class="neopets-button">🎨 View Our Work</a>
-                <a href="mailto:hello@bureaubonanza.com" class="neopets-button">📧 Contact Us</a>
-                <a href="https://instagram.com/bureau.bonanza" class="neopets-button">📸 Instagram</a>
+                <p>
+                    <a href="https://bureaubonanza.com">View Our Work</a> | 
+                    <a href="mailto:hello@bureaubonanza.com">Contact Us</a> | 
+                    <a href="https://instagram.com/bureau.bonanza">Instagram</a>
+                </p>
             </center>
         </div>
         
         <div class="footer">
-            <p style="font-size: 18px; margin-bottom: 15px;">
-                <b>Bureau Bonanza Design Studio</b>
-            </p>
-            <p>Founding Creative Directors:<br>
-                Rachel Copley McQuillan & Stina Sandström
-            </p>
-            <p style="margin: 15px 0;">
-                📧 <a href="mailto:hello@bureaubonanza.com">hello@bureaubonanza.com</a>
-            </p>
-            <p style="font-size: 14px; margin-top: 20px;">
-                ©2024 Bureau Bonanza | Based in Neopia Central
-            </p>
-            <p style="font-size: 12px; color: #FFD700;">
-                ⭐ All designs crafted with love and a little Faerie magic ⭐
-            </p>
+            <p><b>Bureau Bonanza Design Studio</b></p>
+            <p>Rachel Copley McQuillan & Stina Sandstrom</p>
+            <p>hello@bureaubonanza.com</p>
+            <p>&copy; 2024 Bureau Bonanza</p>
         </div>
     </div>
-    
-    <div class="floating-pet"></div>
-    
-    <script>
-        // Randomly move floating pet
-        const pet = document.querySelector('.floating-pet');
-        setInterval(() => {
-            const newBottom = Math.random() * 200 + 20;
-            const newRight = Math.random() * 100 + 20;
-            pet.style.transition = 'all 2s ease';
-            pet.style.bottom = newBottom + 'px';
-            pet.style.right = newRight + 'px';
-        }, 5000);
-    </script>
 </body>
 </html>
