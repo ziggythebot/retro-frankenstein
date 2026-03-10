@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bureau Bonanza - Neopia Edition</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            background: url('https://images.neopets.com/items/tile_negg_print.gif') repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #FFF;
+            border: 10px solid #6B4423;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        
+        .header {
+            background: linear-gradient(to bottom, #FFE4B5, #FFD700);
+            border-bottom: 5px solid #8B4513;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::before,
+        .header::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .header::before {
+            left: 20px;
+            top: 20px;
+            background-image: url('https://pets.neopets.com/cp/kougra/body/1.png');
+        }
+        
+        .header::after {
+            right: 20px;
+            top: 20px;
+            background-image: url('https://pets.neopets.com/cp/blumaroo/body/3.png');
+        }
+        
+        h1 {
+            color: #4B0082;
+            font-size: 48px;
+            margin: 0;
+            text-shadow: 2px 2px #FFD700;
+            font-weight: bold;
+        }
+        
+        .tagline {
+            color: #8B4513;
+            font-size: 18px;
+            margin: 10px 0 0 0;
+            font-style: italic;
+        }
+        
+        .nav {
+            background: #6B4423;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .nav a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .nav a:hover {
+            color: #FFF;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            background: #FFFACD;
+            border: 3px solid #FFD700;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .section h2 {
+            color: #4B0082;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 10px;
+        }
+        
+        .negg-icon {
+            width: 40px;
+            height: 40px;
+            background: url('https://images.neopets.com/items/foo_negg.gif') no-repeat center;
+            background-size: contain;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .service-card {
+            background: #FFF;
+            border: 2px solid #8B4513;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .service-card img {
+            width: 60px;
+            height: 60px;
+            margin: 10px 0;
+        }
+        
+        .neopets-button {
+            background: linear-gradient(to bottom, #FFD700, #FFA500);
+            border: 3px solid #8B4513;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #4B0082;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        
+        .neopets-button:hover {
+            background: linear-gradient(to bottom, #FFA500, #FFD700);
+            transform: translateY(-2px);
+        }
+        
+        .petpet-row {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .petpet {
+            width: 80px;
+            height: 80px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 10px;
+        }
+        
+        .footer {
+            background: #6B4423;
+            color: #FFD700;
+            padding: 30px;
+            text-align: center;
+            border-top: 5px solid #8B4513;
+        }
+        
+        .footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        
+        .guild-frame {
+            background: #FFF;
+            border: 5px double #8B4513;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        
+        .shop-banner {
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FF6347);
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFF;
+            text-shadow: 2px 2px #000;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .floating-pet {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 120px;
+            height: 120px;
+            background: url('https://pets.neopets.com/cp/shoyru/body/6.png') no-repeat center;
+            background-size: contain;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .battledome-weapon {
+            display: inline-block;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Bureau Bonanza ⚡</h1>
+            <p class="tagline">~ Extraordinary Design for Creative Neopians ~</p>
+        </div>
+        
+        <div class="nav">
+            <a href="#">🏠 Home</a>
+            <a href="#">📖 About</a>
+            <a href="#">🎨 Portfolio</a>
+            <a href="#">📬 Contact</a>
+            <a href="#">⭐ Quest</a>
+        </div>
+        
+        <div class="content">
+            <div class="shop-banner">
+                ✨ GRAND OPENING SPECIAL! DESIGN SERVICES NOW AVAILABLE! ✨
+            </div>
+            
+            <div class="section">
+                <h2><span class="negg-icon"></span>Welcome to Our Studio!</h2>
+                <p style="font-size: 16px; line-height: 1.6;">
+                    Greetings, fellow Neopian! We create <b>extraordinary, engaging, and robust design</b> 
+                    for entrepreneurs, artists, and organisations across all of Neopia!
+                </p>
+                <p style="font-size: 16px; line-height: 1.6;">
+                    From Mystery Island to Faerieland, we've helped countless clients achieve their creative dreams!
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2><span class="negg-icon"></span>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="https://images.neopets.com/items/mag_darigan_paint_brush.gif" alt="Brand Identity">
+                        <h3>Brand Identity</h3>
+                        <p>Transform your guild or shop!</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.neopets.com/items/boo_book_dark.gif" alt="Editorial">
+                        <h3>Editorial Design</h3>
+                        <p>Neopian Times features!</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.neopets.com/items/toy_computer.gif" alt="Web Design">
+                        <h3>Web Design</h3>
+                        <p>Custom guild & shop layouts!</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.neopets.com/items/toy_spinning_top.gif" alt="Motion">
+                        <h3>Motion Graphics</h3>
+                        <p>Animated signatures!</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.neopets.com/items/art_paintbrush_rainbow.gif" alt="Illustration">
+                        <h3>Illustration</h3>
+                        <p>Custom pet art!</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://images.neopets.com/items/gift_box_orange.gif" alt="Packaging">
+                        <h3>Packaging</h3>
+                        <p>Product design!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="guild-frame">
+                <h2 style="color: #4B0082; text-align: center;">
+                    <img src="https://images.neopets.com/items/bd_excalibur.gif" alt="Weapon" class="battledome-weapon">
+                    Our Portfolio Arsenal
+                    <img src="https://images.neopets.com/items/bd_excalibur.gif" alt="Weapon" class="battledome-weapon">
+                </h2>
+                <p style="text-align: center; font-size: 16px;">
+                    We've completed quests for clients across all lands of Neopia!<br>
+                    Check out our collection of legendary projects!
+                </p>
+                <center>
+                    <a href="#" class="neopets-button">🎨 View Our Work</a>
+                </center>
+            </div>
+            
+            <div class="section">
+                <h2><span class="negg-icon"></span>Meet Our Petpets!</h2>
+                <p style="text-align: center;">Our studio companions help inspire creativity every day!</p>
+                <div class="petpet-row">
+                    <div class="petpet" style="background-image: url('https://images.neopets.com/items/gift_snowbunny.gif');"></div>
+                    <div class="petpet" style="background-image: url('https://images.neopets.com/items/foo_negg.gif');"></div>
+                    <div class="petpet" style="background-image: url('https://images.neopets.com/items/toy_usuki_rock.gif');"></div>
+                    <div class="petpet" style="background-image: url('https://images.neopets.com/items/foo_negg_rainbow.gif');"></div>
+                </div>
+            </div>
+            
+            <center>
+                <h2 style="color: #4B0082;">Ready to Start Your Quest?</h2>
+                <a href="#" class="neopets-button">📧 Contact Us</a>
+                <a href="#" class="neopets-button">📸 Instagram</a>
+                <a href="#" class="neopets-button">🐦 Twitter</a>
+            </center>
+        </div>
+        
+        <div class="footer">
+            <p style="font-size: 18px; margin-bottom: 15px;">
+                <b>Bureau Bonanza Design Studio</b>
+            </p>
+            <p>Founding Creative Directors:<br>
+                Rachel Copley McQuillan & Stina Sandström
+            </p>
+            <p style="margin: 15px 0;">
+                📧 <a href="mailto:hello@bureaubonanza.com">hello@bureaubonanza.com</a>
+            </p>
+            <p style="font-size: 14px; margin-top: 20px;">
+                ©2024 Bureau Bonanza | Based in Neopia Central
+            </p>
+            <p style="font-size: 12px; color: #FFD700;">
+                ⭐ All designs crafted with love and a little Faerie magic ⭐
+            </p>
+        </div>
+    </div>
+    
+    <div class="floating-pet"></div>
+    
+    <script>
+        // Randomly move floating pet
+        const pet = document.querySelector('.floating-pet');
+        setInterval(() => {
+            const newBottom = Math.random() * 200 + 20;
+            const newRight = Math.random() * 100 + 20;
+            pet.style.bottom = newBottom + 'px';
+            pet.style.right = newRight + 'px';
+        }, 5000);
+    </script>
+</body>
+</html>

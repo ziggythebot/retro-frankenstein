@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/geocities-version.html"
+    },
+    {
+      "src": "/geocities",
+      "dest": "/geocities-version.html"
+    },
+    {
+      "src": "/neopets",
+      "dest": "/neopets-version.html"
+    }
+  ]
+}
